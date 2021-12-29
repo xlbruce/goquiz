@@ -20,10 +20,10 @@ var (
 func main() {
 	flag.Parse()
 
-    if *timeout < 1 {
-        err := fmt.Sprintf("-timeout flag must be set to a value greater than 0. Given was %d\n", *timeout)
-        panic(err)
-    }
+	if *timeout < 1 {
+		err := fmt.Sprintf("-timeout flag must be set to a value greater than 0. Given was %d\n", *timeout)
+		panic(err)
+	}
 
 	fmt.Printf("Opening %s\n", *filename)
 	file, err := os.Open(*filename)
